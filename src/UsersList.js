@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+import User from './User';
 
 class UsersList extends Component{
 
   	render(){
     	return(
-        	<div>
-          		Here is the List of Users
-          	</div>
+        	<ul>
+          		{
+                	this.props.users.map((user) => (
+          				<User key={user.username} user={user} showOrHide={this.props.gameShow}/>
+        			))
+                }
+          	</ul>
         )
     }
 }

@@ -8,13 +8,43 @@ h1 {
   font-size: 2em;
 }
 
-ol {
+ol,ul {
   display: inline-block;
   text-align: left;
+  list-style: none;
 }
 
 li {
   height: 5%;
+}
+
+fieldset {
+  	display: inline;
+	margin: 0 10% 0 10%;
+    border-radius: 5%
+}
+
+.game{
+	margin: 20px 0 0 0
+}
+.onright{
+	margin: 0 10px 10px 10px
+}
+
+.formdiv{
+  	align-content: center;
+  	margin-left: 30%;
+	display: flex;
+  	flex-direction: row;
+	justify-content: center;
+  	width: 50%
+}
+.first-form-div{
+}
+
+.second-form-div{
+	display: flex;
+  	flex-direction: column;
 }
 
 input {
