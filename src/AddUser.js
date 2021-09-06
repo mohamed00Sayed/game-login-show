@@ -23,6 +23,7 @@ class AddUser extends Component{
       	
     	if(test1&&test2&&test3&& !test4){
         	this.props.onAdd(user);
+			this.props.togglePage();
         }else{
         	this.setState((prev)=>({
             	error: 'yes'
@@ -39,7 +40,7 @@ class AddUser extends Component{
           	newUser[targetedProp] = value;
           	return({
             		user: newUser,
-              		error: 'no'
+              		error: 'yes'
             });
         })
     };
@@ -68,7 +69,8 @@ class AddUser extends Component{
                         </fieldset>
                       </div>
                       <div className='second-form-div'>
-                          <button type='submit' className='onright' onClick={(evt)=>{this.addUser(evt)}}>Add</button>
+                          <button type='submit' className='onright' onClick={
+							  (evt)=>{this.addUser(evt)}}>Add</button>
                           <button className='onright' onClick={()=>{this.props.togglePage()}}>Display Users</button>
                       </div>
           			</div>
